@@ -1,0 +1,15 @@
+.mybox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 30px;
+}
+.mybox .left-box,
+.mybox .right-box {
+  width: 50%;
+  min-width: 350px;
+  clear: both;
+}
+.mybox .myselect {
+  width: 200px;
+}

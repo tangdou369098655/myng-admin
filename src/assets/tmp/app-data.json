@@ -14,7 +14,30 @@
       "i18n": "menu.main",
       "group": true,
       "hideInBreadcrumb": true,
-      "children": [
+      "children": [   
+        {
+        "text": "动态表单",
+        "i18n": "menu.form",
+        "icon": "anticon-info",
+        "children": [
+          {
+            "text": "表单1",
+            "link": "/mypro/wlblock",
+            "i18n": "menu.form.basicform",
+            "shortcut": true
+          },
+          {
+            "text": "表单2",
+            "link": "/mypro/one",
+            "i18n": "menu.form.basicform"
+          },
+          {
+            "text": "表单3",
+            "link": "/mypro/two",
+            "i18n": "menu.form.basicform"
+          }
+        ]
+      },
         {
           "text": "仪表盘",
           "i18n": "menu.dashboard",

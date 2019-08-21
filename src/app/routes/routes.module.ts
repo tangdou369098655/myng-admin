@@ -14,6 +14,14 @@ import { UserRegisterResultComponent } from './passport/register-result/register
 // single pages
 import { UserLockComponent } from './passport/lock/lock.component';
 import { CallbackComponent } from './callback/callback.component';
+import { WlblockComponent } from './mypro/wlblock/wlblock.component';
+import { ItemOneComponent } from './mypro/item-one/item-one.component';
+import { ItemTwoComponent } from './mypro/item-two/item-two.component';
+import { ItemThreeComponent } from './mypro/item-three/item-three.component';
+import { ItemFourComponent } from './mypro/item-four/item-four.component';
+import { ItemFiveComponent } from './mypro/item-five/item-five.component';
+import { ItemSixComponent } from './mypro/item-six/item-six.component';
+import { ItemSevenComponent } from './mypro/item-seven/item-seven.component';
 
 const COMPONENTS = [
   DashboardV1Component,
@@ -32,7 +40,7 @@ const COMPONENTS_NOROUNT = [];
 
 @NgModule({
   imports: [SharedModule, RouteRoutingModule],
-  declarations: [...COMPONENTS, ...COMPONENTS_NOROUNT],
+  declarations: [...COMPONENTS, ...COMPONENTS_NOROUNT, WlblockComponent, ItemOneComponent, ItemTwoComponent, ItemThreeComponent, ItemFourComponent, ItemFiveComponent, ItemSixComponent, ItemSevenComponent],
   entryComponents: COMPONENTS_NOROUNT,
 })
 export class RoutesModule {}

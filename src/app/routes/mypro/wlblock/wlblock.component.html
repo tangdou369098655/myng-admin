@@ -1,0 +1,41 @@
+<page-header>
+  <ng-template>
+  </ng-template>
+</page-header>
+<div>
+  <nz-button-group>
+    <button nz-button nzType="primary">新增</button>
+    <button nz-button>删除</button>
+    <button nz-button nzType="default">刷新</button>
+    <button nz-button nzType="default">保存</button>
+  </nz-button-group>
+  <nz-button-group>
+    <button nz-button nzType="primary"><i nz-icon nzType="left"></i>上一个</button>
+    <button nz-button nzType="primary">下一个<i nz-icon nzType="right"></i></button>
+  </nz-button-group>
+</div>
+<div se-container="1" class="mybox">
+    <div class="left-box">
+            <se label="单号选择">
+                    <nz-select [(ngModel)]="mystatus"  [nzPlaceHolder]="'请选择'" class="myselect">
+                        <nz-option *ngFor="let i of status; let idx = index" [nzLabel]="i.text" [nzValue]="idx"></nz-option>
+                    </nz-select>
+                  </se>
+                  <se label="单号选择">
+                    <nz-select [(ngModel)]="mystatus" name="status" id="status" [nzPlaceHolder]="'请选择'" [nzShowSearch]="true" class="myselect">
+                      <nz-option >选项一</nz-option>
+                    </nz-select>
+                  </se>
+                  <se label="单号选择">
+                    <nz-select [(ngModel)]="mystatus" name="status" id="status" [nzPlaceHolder]="'请选择'" [nzShowSearch]="true" class="myselect">
+                        <nz-option >选项一</nz-option>
+                    </nz-select>
+                  </se>
+    </div>
+    <div class="right-box">
+        <textarea cols="30" rows="10" (contextmenu)="myclick($event)"></textarea>
+    </div>
+</div>
+<div>
+
+</div>

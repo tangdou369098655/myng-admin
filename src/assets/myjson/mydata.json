@@ -1,0 +1,24 @@
+{
+  "data1": [
+    {
+      "text": "1ACL",
+      "value": 0,
+      "i18n": "menu.delon.acl"
+    },
+    {
+      "text": "2ACL",
+      "value": 2,
+      "i18n": "menu.delon.acl"
+    },
+    {
+      "text": "3ACL",
+      "value": 3,
+      "i18n": "menu.delon.acl"
+    },
+    {
+      "text": "4ACL",
+      "value": 4,
+      "i18n": "menu.delon.acl"
+    }
+  ]
+}

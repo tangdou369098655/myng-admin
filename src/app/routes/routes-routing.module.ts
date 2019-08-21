@@ -18,6 +18,14 @@ import { UserRegisterResultComponent } from './passport/register-result/register
 // single pages
 import { CallbackComponent } from './callback/callback.component';
 import { UserLockComponent } from './passport/lock/lock.component';
+import { WlblockComponent } from './mypro/wlblock/wlblock.component';
+import { ItemOneComponent } from './mypro/item-one/item-one.component';
+import { ItemTwoComponent } from './mypro/item-two/item-two.component';
+import { ItemThreeComponent } from './mypro/item-three/item-three.component';
+import { ItemFourComponent } from './mypro/item-four/item-four.component';
+import { ItemFiveComponent } from './mypro/item-five/item-five.component';
+import { ItemSixComponent } from './mypro/item-six/item-six.component';
+import { ItemSevenComponent } from './mypro/item-seven/item-seven.component';
 
 const routes: Routes = [
   {
@@ -32,6 +40,14 @@ const routes: Routes = [
       { path: 'dashboard/analysis', component: DashboardAnalysisComponent },
       { path: 'dashboard/monitor', component: DashboardMonitorComponent },
       { path: 'dashboard/workplace', component: DashboardWorkplaceComponent },
+      { path: 'mypro/wlblock', component: WlblockComponent },
+      { path: 'mypro/one', component: ItemOneComponent },
+      { path: 'mypro/two', component: ItemTwoComponent },
+      { path: 'mypro/three', component: ItemThreeComponent },
+      { path: 'mypro/four', component: ItemFourComponent },
+      { path: 'mypro/five', component: ItemFiveComponent },
+      { path: 'mypro/six', component: ItemSixComponent },
+      { path: 'mypro/seven', component: ItemSevenComponent },
       {
         path: 'widgets',
         loadChildren: () => import('./widgets/widgets.module').then(m => m.WidgetsModule),
