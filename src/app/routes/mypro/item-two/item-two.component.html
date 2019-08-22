@@ -1,1 +1,11 @@
 <p>item-two works!</p>
+<nz-progress [nzPercent]="30"></nz-progress>
+<textarea cols="30" rows="10" (contextmenu)="myclick($event)">{{myData}}</textarea>
+<button id="btn" (click)="getData1($event)">上传文件</button>
+<select name="" id="" style="width:200px">
+  <option *ngFor="let i of myData2;let idx = index"  value="i.test"></option>
+</select>
+<nz-upload nzAction="https://jsonplaceholder.typicode.com/posts/" (nzChange)="myUpload($event)">
+    <button nz-button><i nz-icon nzType="upload"></i><span>Click to Upload</span></button>
+  </nz-upload>
+  <input type="file" (change)="myUpload($event)">

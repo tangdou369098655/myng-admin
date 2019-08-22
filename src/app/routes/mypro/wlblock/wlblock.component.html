@@ -5,6 +5,7 @@
 <div>
   <nz-button-group>
     <button nz-button nzType="primary">新增</button>
+    <button nz-button>编辑</button>
     <button nz-button>删除</button>
     <button nz-button nzType="default">刷新</button>
     <button nz-button nzType="default">保存</button>
@@ -33,7 +34,11 @@
                   </se>
     </div>
     <div class="right-box">
-        <textarea cols="30" rows="10" (contextmenu)="myclick($event)"></textarea>
+        <textarea cols="30" rows="10" (contextmenu)="myclick($event)">{{myData}}</textarea>
+        <button id="btn" (click)="getData1()">上传文件</button>
+        <select name="" id="">
+          <option *ngFor="let i of myData2;let idx = index"  value="i.test"></option>
+        </select>
     </div>
 </div>
 <div>
