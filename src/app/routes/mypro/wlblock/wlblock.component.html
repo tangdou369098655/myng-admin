@@ -6,6 +6,8 @@
   <nz-button-group>
     <button nz-button nzType="primary">新增</button>
     <button nz-button>编辑</button>
+    <button nz-button (click)="myBlackBoxChange=true">打开黑框</button>
+
     <button nz-button>删除</button>
     <button nz-button nzType="default">刷新</button>
     <button nz-button nzType="default">保存</button>
@@ -33,14 +35,30 @@
                     </nz-select>
                   </se>
     </div>
-    <div class="right-box">
-        <textarea cols="30" rows="10" (contextmenu)="myclick($event)">{{myData}}</textarea>
-        <button id="btn" (click)="getData1()">上传文件</button>
-        <select name="" id="">
-          <option *ngFor="let i of myData2;let idx = index"  value="i.test"></option>
-        </select>
-    </div>
 </div>
-<div>
+<div class="myBlack" *ngIf="myBlackBoxChange"  >
+      <nz-card class="myBlackBox">
+        <div style="position: relative; ">请把SN贴入下框
+          <span style="position:absolute; 
+          right: -14px;
+          top: -24px;
+          cursor: pointer;
+          " (click)="myBlackBoxChange=false">X</span>
+        </div>
+        <textarea rows="8" nz-input [(ngModel)]="myinputValue"></textarea>
+        <div style="text-align: center;margin-top:10px;line-height: 50px">
+          <span>请</span>
+        <button nz-button  (click)="loadTwo()" [nzLoading]="isLoadingTwo" style="z-index: 9999">
+            <i nz-icon nzType="poweroff"></i>确认提交
+          </button>
+          <span>或者</span>
+          <div style="text-align: center;display:inline-block;line-height: 50px">
+              <span class=" fileinput-button">
+                  <span nz-button nzType="primary" style="display:inline-block;line-height: 30px">点击上传文件</span>
+                  <input type="file" (change)="myUpload($event)">
+              </span>
+          </div>
+        </div>
+      </nz-card>
 
 </div>

@@ -16,6 +16,10 @@ export class WlblockComponent implements OnInit {
   private mystatus;
   private myData2;
   private myData;
+  private myBlackBoxChange:boolean = false;
+  isLoadingTwo = false;
+
+  private myinputValue;
   constructor(private http:_HttpClient ) { }
 
   ngOnInit() {//初始化时候，异步请求服务器端的首页数据
@@ -43,5 +47,22 @@ clipboard.on('error', function(e) {
     console.error('Action:', e.action);
     console.error('Trigger:', e.trigger);
 });
+  }
+  loadTwo(): void {
+    this.isLoadingTwo = true;
+    setTimeout(() => {
+      this.isLoadingTwo = false;
+    }, 5000);
+    console.log(this.myinputValue)
+  }
+
+  myUpload(e){
+    console.log(e)
+    let fileReader = new FileReader();
+    fileReader.onload=()=>{
+      console.log(fileReader.result)
+    }
+    // fileReader.readAsText(e.target.files[0], 'utf-8')
+    fileReader.readAsText(e.target.files[0])
   }
 }
