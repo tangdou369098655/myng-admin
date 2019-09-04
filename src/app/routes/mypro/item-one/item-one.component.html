@@ -1,1 +1,20 @@
-<p>item-one works!</p>
+<nz-button-group [nzSize]="size" style="padding:20px;display:flex">
+  <button nz-button (click)="scrollToIndex(200)">下拉</button>
+  <div style="text-align: center;display:inline-block;overflow: hidden;">
+    <span class=" fileinput-button">
+        <span nz-button nzType="primary" style="display:inline-block;line-height: 30px">点击上传excel文件</span>
+        <!-- <input type="file" (change)="myUploadexcel($event)"/> -->
+        <input type="file" (change)="readExcel($event)"/>
+    </span>
+</div>
+<div style="text-align: center;display:inline-block;overflow: hidden;">
+  <span class=" fileinput-button">
+      <span nz-button nzType="primary" style="display:inline-block;line-height: 30px">点击上传txt文件</span>
+      <input type="file" (change)="myUploadtxt($event)">
+  </span>
+</div>
+</nz-button-group>
+<div class="myitem-one-list">
+    <st #st [data]="data" [columns]="columns" [page]="page" virtualScroll [scroll]="{ x: '500px', y: '240px' }"></st>
+</div>
+
