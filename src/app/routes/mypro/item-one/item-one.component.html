@@ -17,4 +17,8 @@
 <div class="myitem-one-list">
     <st #st [data]="data" [columns]="columns" [page]="page" virtualScroll [scroll]="{ x: '500px', y: '240px' }"></st>
 </div>
-
+<div>
+  上传图片
+  <input type="file" (change)="mysrcChange($event)">
+</div>
+<img [src]="mysrc" >

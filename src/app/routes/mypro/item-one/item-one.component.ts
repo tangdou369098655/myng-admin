@@ -5,12 +5,14 @@ import { Subject } from 'rxjs';
 import { takeUntil } from 'rxjs/operators';
 import * as XLSX from 'xlsx';
 import { NzMessageService, NzNotificationService } from 'ng-zorro-antd';
+import { url } from 'inspector';
 @Component({
   selector: 'app-item-one',
   templateUrl: './item-one.component.html',
   styleUrls: ['./item-one.component.less']
 })
 export class ItemOneComponent implements AfterViewInit, OnDestroy {
+  private mysrc;
   private mylist;
   private destroy$ = new Subject();
   @ViewChild('st', { static: false }) st: STComponent;
@@ -105,7 +107,10 @@ export class ItemOneComponent implements AfterViewInit, OnDestroy {
       console.log('scroll index to', data);
     });
   }
-
+  mysrcChange(e){
+console.log(e);
+this.mysrc=URL.createObjectURL(e.target.files[0]);
+  }
   ngOnDestroy(): void {
     this.destroy$.next();
     this.destroy$.complete();
