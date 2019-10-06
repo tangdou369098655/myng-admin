@@ -1,4 +1,7 @@
 <p>item-two works!</p>
+<button nz-button (click)="scrollToIndex(200)">Scroll To Index 200</button>
+<st #st [widthMode]="{ type: 'strict' }" [data]="data" [columns]="columns" [page]="page" virtualScroll [scroll]="{ x: '1300px', y: '240px' }"></st>
+<br>
 <nz-progress [nzPercent]="30"></nz-progress>
 <textarea cols="30" rows="10" (contextmenu)="myclick($event)">{{myData}}</textarea>
 <button id="btn" (click)="getData1($event)">上传文件</button>
