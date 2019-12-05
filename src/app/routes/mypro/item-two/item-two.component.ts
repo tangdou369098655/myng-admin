@@ -67,6 +67,7 @@ export class ItemTwoComponent implements OnInit ,AfterViewInit, OnDestroy{
   ngAfterViewInit(): void {
     this.st.cdkVirtualScrollViewport.scrolledIndexChange.pipe(takeUntil(this.destroy$)).subscribe(data => {
       console.log('scroll index to', data);
+      
     });
   }
 
